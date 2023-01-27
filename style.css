@@ -40,7 +40,7 @@ header{
     width:120px;
 }
 .bag{
-    float:right;
+float:right;                                                                                                                                                                                                 
 }
 
 header::after{
