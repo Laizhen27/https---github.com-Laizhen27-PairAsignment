@@ -40,7 +40,14 @@ header{
     width:120px;
 }
 .bag{
-float:right;                                                                                                                                                                                                 
+    float:right;
+    padding-top: 20px; 
+                                                                                                                                                                                              
+}
+.profile{
+    margin-left: 50px;  
+    float:right;
+    padding-top: 20px;                                                                                                                                                                                                 
 }
 
 header::after{
