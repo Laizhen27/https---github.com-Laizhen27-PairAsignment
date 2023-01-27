@@ -19,7 +19,7 @@ body{
 }
 
 header{
-    background: black;
+    background: #919982;
     display:flex;
     align-items: center;
     height:auto;
@@ -35,12 +35,12 @@ header{
     padding-top: 25px;
     margin-left: 0;
     float:left;
-    height: 100%;
     z-index: 1;
     position:sticky;
-    width:250px;
-    height: 80px;
-
+    width:120px;
+}
+.bag{
+    float:right;
 }
 
 header::after{
@@ -64,18 +64,18 @@ nav li {
     position: relative;
     padding: 40px;
     padding-bottom: 30px;
-    background: black;
+    background: #919982;
     border-radius: 10px;
     margin-right:20px;
     padding-left: 20px;
     display:inline-block;
 
 
-}
+}   
 
 
 nav a{
-    color:yellow;
+    color:white;
     font-size: 25px;
     font: bold;
     font-family: "Segoe UI", Arial, sans-serif;
@@ -102,8 +102,8 @@ nav ul ul li{
 }
 
 nav ul li a:hover{
-    color:#33ffff;
-    box-shadow: 0 0 5px #33ffff;
+    color: rgb(192, 242, 192);
+    box-shadow: 0 0 5px rgb(192, 242, 192)  ;
  
 }
 nav ul li:hover> ul{
@@ -113,4 +113,16 @@ nav ul li:hover> ul{
 }
 html{
     scroll-behavior: smooth;
+}
+.checkbtn{
+    font-size:30px;
+    color:white;
+    float:right;
+    padding-top: 10%;
+    padding-left:5%;
+    cursor: pointer;
+    display:none;
+}
+#check{
+    display:none;
 }
