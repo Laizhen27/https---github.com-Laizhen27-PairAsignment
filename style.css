@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    background:#cbbe92;
+    margin:0;
+    padding: 0;
+    /* display:flex; */
+    justify-content:center;
+    align-items: center;
+
+
+}
+#nav{
+    z-index: 1;
+    position:sticky;
+}
+.container{
+    z-index: 1;
+    position:sticky;
+}
+
+header{
+    background: black;
+    display:flex;
+    align-items: center;
+    height:auto;
+
+    z-index: 1;
+    position:sticky;
+    top:0;
+}
+
+
+
+.logo{
+    padding-top: 25px;
+    margin-left: 0;
+    float:left;
+    height: 100%;
+    z-index: 1;
+    position:sticky;
+    width:250px;
+    height: 80px;
+
+}
+
+header::after{
+    content:"";
+    display: table;
+    clear: both;
+}
+.container{
+    width: 85%;
+    margin: 0 auto;
+
+}
+
+
+
+nav ul{
+    list-style: none;
+    float:right;
+}
+nav li {
+    position: relative;
+    padding: 40px;
+    padding-bottom: 30px;
+    background: black;
+    border-radius: 10px;
+    margin-right:20px;
+    padding-left: 20px;
+    display:inline-block;
+
+
+}
+
+
+nav a{
+    color:yellow;
+    font-size: 25px;
+    font: bold;
+    font-family: "Segoe UI", Arial, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+
+
+
+}
+nav ul ul{
+    position:absolute;
+    visibility: hidden;
+
+}
+nav ul ul li{
+    position:relative;
+    margin:0;
+    width:150px;
+    float:none;
+
+
+  
+
+}
+
+nav ul li a:hover{
+    color:#33ffff;
+    box-shadow: 0 0 5px #33ffff;
+ 
+}
+nav ul li:hover> ul{
+    opacity:1;
+    visibility: visible;
+
+}
+html{
+    scroll-behavior: smooth;
+}
