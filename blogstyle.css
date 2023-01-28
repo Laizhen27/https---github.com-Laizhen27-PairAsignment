@@ -132,3 +132,114 @@ html{
 #check{
     display:none;
 }
+#text{
+    background-image: url("https://images.unsplash.com/photo-1523381294911-8d3cead13475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHQlMjBzaGlydHxlbnwwfHwwfHw%3D&w=1000&q=80");
+    height: 100vh;
+    width: 169vh;
+    background-size: cover;
+    background-position: top 35% right 0;
+    padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#text h1 {
+    color: aquamarine;
+}
+#text2 h1{
+    align-items: center;
+    font-size: 45px;
+    padding-left: 40%;
+    padding-right: 0;
+    padding-top: 20px;
+    color: aquamarine;
+}
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between ;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+#product1 .pro{
+    width: 25%;
+    min-width: 250px;
+    padding: 15px 12px;
+    border: 2px solid grey;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 30px 30px 40px rgba(0, 0, 0, 0.05);
+    margin: 20px 0;
+    transition: 0.5s ease;
+    
+
+}
+#product1 .pro:hover{
+    box-shadow: 30px 30px 40px rgba(0, 0, 0, 0.5);
+}
+#product1 .pro img{
+    width: 100%;
+    border-radius: 25px;
+}
+#product1 .pro .des{
+    text-align: start;
+    padding: 15px 0;
+}
+#product1 .pro .des span{
+    color: aquamarine;
+    font-size: 10px;
+}
+#product1 .pro h5{
+    font-size: 15px;
+}
+#product1 .pro p{
+    font-size: 15px;
+}
+#product1 .pro h4{
+    font-size: 15px;
+}
+#product1 {
+    padding-left: 30px;
+}
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+footer .col1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+footer .col3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+footer h4{
+    font-size: 15px;
+    padding-bottom: 30px;
+}
+footer p{
+    font-size: 12px;
+    margin: 0 0 10px 0;
+}
+footer a{
+    font-size: 15px;
+    text-decoration: none;
+    color: aquamarine;
+    margin-bottom: 10px;
+}
+footer .col3{
+    flex-direction: column;
+}
+footer .copyright{
+    align-items: baseline;
+    align-items: center;
+}
