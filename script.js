@@ -71,7 +71,7 @@ $(document).ready(function () {
         getContacts();
       });
     });//end click 
-  
+  console.log(response);
   
     //[STEP] 6
     //let's create a function to allow you to retrieve all the information in your contacts
