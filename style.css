@@ -6,8 +6,6 @@ body{
     /* display:flex; */
     justify-content:center;
     align-items: center;
-
-
 }
 #nav{
     z-index: 1;
@@ -17,28 +15,22 @@ body{
     z-index: 1;
     position:sticky;
 }
-
 header{
     background: #919982;
     display:flex;
     align-items: center;
     height:auto;
-
     z-index: 1;
     position:sticky;
     top:0;
 }
-
-
-
 .logo{
     padding-top: 15px;
-    padding-right: 500px;
+    margin-left: 0;
     float:left;
-    z-index: 5;
+    z-index: 1;
     position:sticky;
     width:120px;
-    
 }
 .bag{
     float:right;
@@ -50,7 +42,6 @@ header{
     float:right;
     padding-top: 20px;                                                                                                                                                                                                 
 }
-
 header::after{
     content:"";
     display: table;
@@ -59,11 +50,7 @@ header::after{
 .container{
     width: 85%;
     margin: 0 auto;
-
 }
-
-
-
 nav ul{
     list-style: none;
     float:right;
@@ -77,11 +64,7 @@ nav li {
     margin-right:20px;
     padding-left: 20px;
     display:inline-block;
-
-
 }   
-
-
 nav a{
     color:white;
     font-size: 25px;
@@ -89,24 +72,17 @@ nav a{
     font-family: "Segoe UI", Arial, sans-serif;
     text-decoration: none;
     text-transform: uppercase;
-
-
-
 }
 nav ul ul{
     position:absolute;
     visibility: hidden;
-
 }
 nav ul ul li{
     position:relative;
     margin:0;
     width:150px;
     float:none;
-
-
   
-
 }
 nav ul li a:hover{
     color: rgb(192, 242, 192);
@@ -116,7 +92,6 @@ nav ul li a:hover{
 nav ul li:hover> ul{
     opacity:1;
     visibility: visible;
-
 }
 html{
     scroll-behavior: smooth;
@@ -135,8 +110,8 @@ html{
 }
 #text{
     background-image: url("https://images.unsplash.com/photo-1523381294911-8d3cead13475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHQlMjBzaGlydHxlbnwwfHwwfHw%3D&w=1000&q=80");
-    height: 84vh;
-    width: auto;
+    height: 100vh;
+    width: 169vh;
     background-size: cover;
     background-position: top 35% right 0;
     padding: 0 100px;
@@ -172,7 +147,7 @@ html{
     box-shadow: 30px 30px 40px rgba(0, 0, 0, 0.05);
     margin: 20px 0;
     transition: 0.5s ease;
-    
+
 
 }
 #product1 .pro:hover{
