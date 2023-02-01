@@ -1,0 +1,30 @@
+body, html {
+    height: 100%;
+  }
+  
+.parallax{
+    background-image: url("https://images.unsplash.com/photo-1523381294911-8d3cead13475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHQlMjBzaGlydHxlbnwwfHwwfHw%3D&w=1000&q=80");
+    height:100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax1{
+    background-image: url("https://img.freepik.com/premium-photo/clothing-store-department-store-display-clothes-inside-shop-decorated-shop-loft-style-with-lot-t-shirt-3d-rendering_156429-2489.jpg?w=2000");
+    height:100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* .aboutus{
+    font-size: 40px;
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fbizfluent.com%2Fhow-8787312-display-tshirts.html&psig=AOvVaw2M6g3U10C4R0dl9P9wDyqo&ust=1675344712926000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCIj8uci39PwCFQAAAAAdAAAAABAQ');
+} */
+  
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
