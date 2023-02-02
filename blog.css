@@ -3,26 +3,48 @@ body, html {
   }
   
 .parallax{
-    background-image: url("https://images.unsplash.com/photo-1523381294911-8d3cead13475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHQlMjBzaGlydHxlbnwwfHwwfHw%3D&w=1000&q=80");
-    height:100vh;
+    background-image: url("blog/designining.jpg");
+    height:90vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .parallax1{
-    background-image: url("https://img.freepik.com/premium-photo/clothing-store-department-store-display-clothes-inside-shop-decorated-shop-loft-style-with-lot-t-shirt-3d-rendering_156429-2489.jpg?w=2000");
-    height:100vh;
+    background-image: url("blog/shop.png");
+    height: 100vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* .aboutus{
+.info1{
+    padding-top: 5%;
+    margin-left: 5%;
+}
+.aboutus{
+    width: 600px;
+    text-align: left;
     font-size: 40px;
-    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fbizfluent.com%2Fhow-8787312-display-tshirts.html&psig=AOvVaw2M6g3U10C4R0dl9P9wDyqo&ust=1675344712926000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCIj8uci39PwCFQAAAAAdAAAAABAQ');
-} */
-  
+    border: 2px solid black;
+    color: white;
+    background-color: rgb(0,0,0,0.6);
+    
+}
+.shop{
+    width: 600px;
+    text-align: center;
+    font-size: 40px;
+    border: 2px solid black;
+    color: white;
+    background-color: rgb(0,0,0,0.6); 
+}
+
+.info2{
+    padding-top: 20%;
+    float:center;
+    margin-left: 28%;
+}
 @media only screen and (max-device-width: 1366px) {
     .parallax {
       background-attachment: scroll;

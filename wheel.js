@@ -6,3 +6,8 @@ spinBtn.onclick = function(){
     wheel.style.transform = "rotate(" +value+"deg)"
     value += Math.ceil(Math.random() * 3600);
 }
+
+
+// item = value //  360 
+
+// prize = round (item/45)
