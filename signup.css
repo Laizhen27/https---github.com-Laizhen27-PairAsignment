@@ -1,0 +1,20 @@
+.container {
+    width: 400px;
+    padding-top: 5%;
+    flex-wrap: wrap;  
+    float:left;
+    margin-left: 10%;
+}
+body{
+        background-image: linear-gradient(to right, green , rgb(137, 226, 137));
+}
+
+.container-login{
+    float: center;
+    width: 400px;
+    padding-top: 5%;
+    flex-wrap: wrap;  
+    float:right;
+    margin-right:20% ;
+    height:10%;
+}
