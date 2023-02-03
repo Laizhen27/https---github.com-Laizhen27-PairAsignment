@@ -27,7 +27,6 @@ $(document).ready(function () {
     //[STEP 3]: get form values when user clicks on send
     //Adapted from restdb api
     let jsondata = {
-
       "name":SignUpName,
       "email":SignUpEmail,
       "phoneno":SignUpPhoneNo,
@@ -192,44 +191,7 @@ $(document).ready(function () {
     //[STEP 12a]: We call our update form function which makes an AJAX call to our RESTDB to update the selected information
     updateForm(contactId, contactName, contactEmail, contactMsg, contactMentor);
   });//end updatecontactform listener
-
-  //[STEP 13]: function that makes an AJAX call and process it 
-  //UPDATE Based on the ID chosen
-  function updateForm(id, contactName, contactEmail, contactMsg, contactMentor) {
-    //@TODO create validation methods for id etc. 
-
-    var jsondata = { 
-      "name": contactName, 
-      "email": contactEmail, 
-      "message": contactMsg,
-      "mentor": contactMentor,
-     };
-    var settings = {
-      "async": true,
-      "crossDomain": true,
-      "url": `https://idasg-39a1.restdb.io/rest/account/${id}`,
-      //update based on the ID
-      "method": "PUT",
-      "headers": {
-        "content-type": "application/json",
-        "x-apikey": APIKEY,
-        "cache-control": "no-cache"
-      },
-      "processData": false,
-      "data": JSON.stringify(jsondata)
-    }
-
-    //[STEP 13a]: send our AJAX request and hide the update contact form
-    $.ajax(settings).done(function (response) {
-      console.log(response);
-      
-      $("#update-contact-container").fadeOut(5000);
-      //update our contacts table
-      getContacts();
-    });
-  }//end updateform function
-
-
+  
   $("#contact-list").on("click", ".delete", function (e) {
     e.preventDefault();
     let id = $(this).data("id");
