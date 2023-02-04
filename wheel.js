@@ -7,14 +7,16 @@ console.log(value%360)
 //Spin Function
 const finalValue = document.getElementById("final-value");
 spinBtn.onclick = function(){
-    wheel.style.transform = "rotate(" +value+"deg)"
     value += Math.ceil(Math.random() * 3600);
+    wheel.style.transform = "rotate(" +value+"deg)"
     let award = Results(value);
     if(award != null){
         result.innerHTML = award;
         console.log(value%360)
         console.log(award)
-    }
+}
+
+
 }
 //Object that stores values of minimum and maximum angle for a value
 const rotationValues = [
@@ -38,4 +40,5 @@ function Results(value){
       }
     }
 };
+
 

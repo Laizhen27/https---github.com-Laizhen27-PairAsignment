@@ -7,7 +7,7 @@ $(document).ready(function () {
   $("#add-update-msg").hide();
 
   //[STEP 1]: Create our submit form listener
-  $("#contact-submit").on("click", function (e) {
+  $("#signup-submit").on("click", function (e) {
     //prevent default action of the button 
     e.preventDefault();
 
@@ -67,7 +67,7 @@ $(document).ready(function () {
       
       //@TODO update frontend UI 
       $("#add-update-msg").show().fadeOut(3000);
-
+      $("#update-contact-container").show();
       //update our table 
       getContacts();
     });
@@ -149,31 +149,6 @@ $(document).ready(function () {
 
 
   }
-
-  //[STEP 10]: Create our update listener
-  //here we tap onto our previous table when we click on update
-  //this is a delegation feature of jquery
-  //because our content is dynamic in nature, we listen in on the main container which is "#contact-list". For each row we have a class .update to help us
-  $("#contact-list").on("click", ".update", function (e) {
-    e.preventDefault();
-    //update our update form values
-    let contactName = $(this).data("name");
-    let contactEmail = $(this).data("email");
-    let contactMsg = $(this).data("msg");
-    let contactMentor = $(this).data("mentor");
-    let contactId = $(this).data("id");
-    console.log($(this).data("msg"));
-
-    //[STEP 11]: Load in our data from the selected row and add it to our update contact form 
-    $("#update-contact-name").val(contactName);
-    $("#update-contact-email").val(contactEmail);
-    $("#update-contact-msg").val(contactMsg);
-    $("#update-contact-mentor").val(contactMentor);
-    $("#update-contact-id").val(contactId);
-    $("#update-contact-container").show();
-
-  });//end contact-list listener for update function
-
   //[STEP 12]: Here we load in our contact form data
   //Update form listener
   $("#update-contact-submit").on("click", function (e) {
@@ -182,6 +157,8 @@ $(document).ready(function () {
     let contactName = $("#update-contact-name").val();
     let contactEmail = $("#update-contact-email").val();
     let contactMsg = $("#update-contact-msg").val();
+
+    
     let contactMentor = $("#update-contact-mentor").val();
     let contactId = $("#update-contact-id").val();
 
@@ -191,7 +168,7 @@ $(document).ready(function () {
     //[STEP 12a]: We call our update form function which makes an AJAX call to our RESTDB to update the selected information
     updateForm(contactId, contactName, contactEmail, contactMsg, contactMentor);
   });//end updatecontactform listener
-  
+
   $("#contact-list").on("click", ".delete", function (e) {
     e.preventDefault();
     let id = $(this).data("id");
@@ -218,3 +195,6 @@ $(document).ready(function () {
   });//end contact-list listener for delte function
 
 })
+
+
+

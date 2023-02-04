@@ -12,11 +12,9 @@
 
     <div class="container" >
       <h1>Sign Up</h1>
-      <div id="add-update-msg">
-        <div class="alert alert-success" role="alert">
+        <div class="alert alert-success" role="alert" id="add-update-msg">
           Contact record successfully added
         </div>
-      </div>
       <div class="form" id="add-contact">
         <form id="add-contact-form">
           <div class="form-group">
@@ -68,31 +66,35 @@
               </div>
               </form>
               <br>
-      <input type="submit" value="Sign Up" class="btn btn-primary" id="contact-submit">   
+      <input type="submit" value="Sign Up" class="btn btn-primary" id="signup-submit">   
+      <script src="script.js"></script>
         </form>
       </div>
     </div><!-- end add container --> 
     <div class="container-login">
+      <div class="alert alert-success" role="alert" id="add-login-msg">
+        Successfully loged in 
+      </div>
         <h1>Log in</h1>
     <form>
       <div class="mb-3">
-        <label for="signup-email" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="signup-email" aria-describedby="emailHelp">
+        <label for="login-email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="login-email" aria-describedby="emailHelp" required>
         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
       </div>
       <div class="mb-3">
-        <label for="signup-password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="signup-password">
+        <label for="login-password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="login-password">
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary" id = "login-submit">Log In</button>
+      <script src="login.js"></script>
     </form>
   </div>
   
 
     
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="/js/popper.min.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
-  <script src="script.js"></script>
+
+ 
+
   </body>
 </html>
