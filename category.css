@@ -1,3 +1,23 @@
+.product{
+    display: flex;
+    align-items: center;
+
+}
+.product img{
+    width:70px;
+    height:70px;
+    object-fit: cover;
+    border-radius: 5px;
+
+}
+
+.product.details h2{
+    font-size: 30px; 
+}
+.product.details h3{
+    font-size: 18px; 
+}
+
 .designs h1{
     width: 80%;
     margin: auto;
@@ -30,6 +50,7 @@
     border-radius: 15px;
     margin-bottom: 25px;
     position: relative;
+    cursor: pointer;
 }
 .design-box img{
     height: 100%;
@@ -67,4 +88,8 @@
 .design-box:hover .design-box-desc{
     bottom: 35%;
     opacity: 1;
+}
+.container-fluid{
+    float: center;
+    color: black;
 }

@@ -1,10 +1,8 @@
+$("#update-contact-container").hide();
+$("#add-update-msg").hide();
 //[STEP 0]: Make sure our document is A-OK
 $(document).ready(function () {
   //what kind of interface we want at the start 
-  const APIKEY = "63d641823bc6b255ed0c43e4";
-  getContacts();
-  $("#update-contact-container").hide();
-  $("#add-update-msg").hide();
 
   //[STEP 1]: Create our submit form listener
   $("#signup-submit").on("click", function (e) {
@@ -22,8 +20,6 @@ $(document).ready(function () {
     let SignUpExpiry = $("#signup-expiry").val();
     let SignUpCSV = $("#signup-csv").val();
     let SignUpPassword = $("#signup-password").val();
-
-
     //[STEP 3]: get form values when user clicks on send
     //Adapted from restdb api
     let jsondata = {
@@ -45,7 +41,7 @@ $(document).ready(function () {
       "method": "POST", //[cher] we will use post to send info
       "headers": {
         "content-type": "application/json",
-        "x-apikey": APIKEY,
+        "x-apikey":"63d641823bc6b255ed0c43e4",
         "cache-control": "no-cache"
       },
       "processData": false,
@@ -63,138 +59,10 @@ $(document).ready(function () {
     $.ajax(settings).done(function (response) {
       console.log(response);
       
-      $("#contact-submit").prop( "disabled", false);
+      $("#signup-submit").prop( "disabled", false);
       
       //@TODO update frontend UI 
       $("#add-update-msg").show().fadeOut(3000);
-      $("#update-contact-container").show();
-      //update our table 
-      getContacts();
     });
   });//end click 
-
-
-  //[STEP] 6
-  //let's create a function to allow you to retrieve all the information in your contacts
-  //by default we only retrieve 10 results
-  function getContacts(limit = 10, all = true) {
-
-    //[STEP 7]: Create our AJAX settings
-    let settings = {
-      "async": true,
-      "crossDomain": true,
-      "url": "https://idasg-39a1.restdb.io/rest/account",
-      "method": "GET", //[cher] we will use GET to retrieve info
-      "headers": {
-        "content-type": "application/json",
-        "x-apikey": APIKEY,
-        "cache-control": "no-cache"
-      },
-    }
-
-    //[STEP 8]: Make our AJAX calls
-    //Once we get the response, we modify our table content by creating the content internally. We run a loop to continously add on data
-    //RESTDb/NoSql always adds in a unique id for each data, we tap on it to have our data and place it into our links 
-    $.ajax(settings).done(function (response) {
-      
-      let content = "";
-
-      for (var i = 0; i < response.length && i < limit; i++) {
-        //console.log(response[i]);
-        //[METHOD 1]
-        //let's run our loop and slowly append content
-        //we can use the normal string append += method
-        /*
-        content += "<tr><td>" + response[i].name + "</td>" +
-          "<td>" + response[i].email + "</td>" +
-          "<td>" + response[i].message + "</td>
-          "<td>Del</td><td>Update</td</tr>";
-        */
-
-        //[METHOD 2]
-        //using our template literal method using backticks
-        //take note that we can't use += for template literal strings
-        //we use ${content} because -> content += content 
-        //we want to add on previous content at the same time
-        content = `${content}<tr id='${response[i]._id}'>
-        <td>${response[i].name}</td>
-        <td>${response[i].email}</td>
-        <td>${response[i].phoneno}</td>
-        <td>${response[i].shipping}</td>
-        <td>${response[i].creditcard}</td>
-        <td>${response[i].expiry}</td>
-        <td>${response[i].csv}</td>
-        <td>${response[i].password}</td>
-        <td><a href='#' class='delete' 
-        data-id='${response[i]._id}'>Del</a></td>
-        <td><a href='#update-contact-container' class='update' 
-        data-id='${response[i]._id}' 
-        data-name='${response[i].name}' 
-        data-email='${response[i].email}'
-        data-phoneno='${response[i].phoneno}'
-        data-shipping ='${response[i].shipping}          
-        data-creditcard ='${response[i].creditcard}       
-        data-expiry ='${response[i].expiry}       
-        data-csv ='${response[i].csv}    
-        data-password ='${response[i].password}          
-        >Update</a></td></tr>`;
-      }
-
-      //[STEP 9]: Update our HTML content
-      //let's dump the content into our table body
-      $("#contact-list tbody").html(content);
-
-      $("#total-contacts").html(response.length);
-    });
-
-
-  }
-  //[STEP 12]: Here we load in our contact form data
-  //Update form listener
-  $("#update-contact-submit").on("click", function (e) {
-    e.preventDefault();
-    //retrieve all my update form values
-    let contactName = $("#update-contact-name").val();
-    let contactEmail = $("#update-contact-email").val();
-    let contactMsg = $("#update-contact-msg").val();
-
-    
-    let contactMentor = $("#update-contact-mentor").val();
-    let contactId = $("#update-contact-id").val();
-
-    console.log($("#update-contact-msg").val());
-    console.log(contactMsg);
-
-    //[STEP 12a]: We call our update form function which makes an AJAX call to our RESTDB to update the selected information
-    updateForm(contactId, contactName, contactEmail, contactMsg, contactMentor);
-  });//end updatecontactform listener
-
-  $("#contact-list").on("click", ".delete", function (e) {
-    e.preventDefault();
-    let id = $(this).data("id");
-
-    var settings = {
-      "async": true,
-      "crossDomain": true,
-      "url": `https://idasg-39a1.restdb.io/rest/account/${id}`,
-      "method": "DELETE",
-      "headers": {
-        "content-type": "application/json",
-        "x-apikey": APIKEY,
-        "cache-control": "no-cache"
-      }
-    }
-    
-    $.ajax(settings).done(function (response) {
-      console.log(response);
-      getContacts();
- 
-    });
-    
-
-  });//end contact-list listener for delte function
-
-})
-
-
-
+});
