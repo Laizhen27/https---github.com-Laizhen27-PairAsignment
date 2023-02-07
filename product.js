@@ -17,9 +17,9 @@ $(document).ready(function () {
         datashit =  divdes.appendChild(document.createElement("h5"));// creating element in java script 
         datashit.innerText = details.name;// assign data using API
         datashit = divdes.appendChild(document.createElement("h5"));// creating element in java script 
-        datashit.innerText = details.sold;// assign data using API
+        datashit.innerText = "Sold: " + details.sold;// assign data using API
         datashit = divdes.appendChild(document.createElement("h4"));// creating element in java script 
-        datashit.innerText = details.price;// assign data using API*/
+        datashit.innerText = "$ " + details.price;// assign data using API*/
     });
     {
 
