@@ -2,13 +2,17 @@ $("#update-contact-container").hide();
 $("#add-update-msg").hide();
 //[STEP 0]: Make sure our document is A-OK
 $(document).ready(function () {
+  $("p.Invalidname").hide();
+  $("p.Invalidemail").hide();
+  $("p.Invalidhpno").hide();
+  $("p.Invaliddate").hide();
+  
   //what kind of interface we want at the start 
-
   //[STEP 1]: Create our submit form listener
   $("#signup-submit").on("click", function (e) {
-    //prevent default action of the button 
-    e.preventDefault();
 
+    e.preventDefault();
+    
     //[STEP 2]: let's retrieve form data
     //for now we assume all information is valid
     //you are to do your own data validation
@@ -20,6 +24,8 @@ $(document).ready(function () {
     let SignUpExpiry = $("#signup-expiry").val();
     let SignUpCSV = $("#signup-csv").val();
     let SignUpPassword = $("#signup-password").val();
+    
+    //prevent default action of the button 
     //[STEP 3]: get form values when user clicks on send
     //Adapted from restdb api
     let jsondata = {
@@ -32,7 +38,6 @@ $(document).ready(function () {
       "csv": SignUpCSV,
       "password":SignUpPassword
     };
-
     //[STEP 4]: Create our AJAX settings. Take note of API key
     let settings = {
       "async": true,
@@ -54,7 +59,6 @@ $(document).ready(function () {
         $("#add-contact-form").trigger("reset");
       }
     }
-
     //[STEP 5]: Send our ajax request over to the DB and print response of the RESTDB storage to console.
     $.ajax(settings).done(function (response) {
       console.log(response);
@@ -66,3 +70,49 @@ $(document).ready(function () {
     });
   });//end click 
 });
+function valid()
+{
+  if(SignUpName != "")
+  {
+      if(SignUpEmail.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/))
+      {
+        if(SignUpPhoneNo.length ==8)
+        {
+            if(SignUpExpiry <= getdate() )
+            {
+                
+            }
+            else
+            {
+              $("p.Invaliddate").show();
+            }
+        }
+        else
+        {
+          $("p.Invalidhpno").show();
+        }     
+      }
+      else
+      {
+        $("p.Invalidemail").show();
+      }
+        
+    }
+  else
+  {
+    $("p.Invalidname").show();
+  }
+}
+
+function validatEmail(){
+  if(SignUpEmail.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/))
+  {
+    $("p.Invalidemail").hide();
+  }
+  else{
+    $("p.Invalidemail").show();
+  }
+
+}
+
+
