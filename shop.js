@@ -5,8 +5,10 @@ $(document).ready(function () {
     console.log(product.count)
     product.forEach(details => {
         console.log(details);
-        var div = document.querySelector("div.pro-container");// creating element in java script 
-        var divpro = div.appendChild(document.createElement("div"));// creating element in java script 
+        var div = document.querySelector("div.pro-container");
+        var a = div.appendChild(document.createElement("a"))
+        a.href = "#"
+        var divpro = a.appendChild(document.createElement("div"));// creating element in java script 
         divpro.className = "pro";// creating class name
         datashit = divpro.appendChild(document.createElement("img"));// creating element in java script 
         datashit.src = details.image// assign data using API

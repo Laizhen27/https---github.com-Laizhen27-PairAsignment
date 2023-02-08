@@ -1,11 +1,15 @@
 
-#product1 .pro-container{
+#product1 a-container{
     display: flex;
     justify-content: space-between ;
     padding: 30px;
     flex-wrap: wrap;
 }
-#product1 .pro{
+#product1 a{
+    text-decoration: none;
+    color:black
+}
+a .pro{
     width: 25%;
     min-width: 250px;
     /* padding: 15px 12px; */
