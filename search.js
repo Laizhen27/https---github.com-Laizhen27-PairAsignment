@@ -13,37 +13,38 @@ $(document).ready(function(){
     $.ajax(settings).done(function (response){
         console.log(response);
         for(var i=0; i < response.length; i++){
+            
             $("div.product-list").append(
                 '<a href="#"> <div class="product">\
                 <img src = "'+response[i].image+'">\
-                <div class="product">\
-                    <h2 id="result">'+ response[i].name + '</h2>\
+                <div class="details">\
+                    <h2 id="results">'+ response[i].name + '</h2>\
                     <h3>'+"$ " + response[i].price + '</h3> </a>'         
             )
 
-            // $("div.product").hide();
+            $("div.product").css("display","none");
             // var product = document.getElementsByClassName('product')
             // product.hide();
         }
     })
-    
-    // function Search(){
-    //     let items = document.getElementsByClassName('product')
-    //     let result = document.getElementsById('#result');
-    //     let input = document.getElementById('#search-item')
-    //     for(var i =0 ; i < result.length; i++){
-    //         if(input == ""){
-    //             items[i].hide();
-    //         }
-    //         else if ( (input.indexof( result[i].innerText)) > -1 ){
-    //             items[i].show()
-    //         }
-    //         else{
-    //             items[i].hide();
-    //         }
-    //     }
-    // }
-    
-    
+
 })
+function Search(){
+    let items = document.querySelectorAll('div.product')
+    var searchresult = $('#search-item').val().toUpperCase();
+    for(var i =0 ; i < items.length; i++){
+        let product = items[i].children[1].children[0].children[0].innerText
+        console.log(searchresult);
+        console.log(product);
+        if (searchresult == ""){
+            items[i].style.display = "none";
+        }
+        else if (product.includes(searchresult) == true){
+            items[i].style.display = "block";
+        }
+        else{
+            items[i].style.display = "none";
+        }
+    }
+}
 

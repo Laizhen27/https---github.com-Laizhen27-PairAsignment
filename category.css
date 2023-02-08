@@ -2,6 +2,9 @@
     display: flex;
     align-items: center;
 }
+.product-list a{
+    color:black
+}
 .product img{
     width:70px;
     height:70px;
@@ -11,14 +14,9 @@
 }
 .product.details{
     padding-right: 30px;
+    color:black;
 }
-.product.details h2{
-    font-size: 30px;
-    
-}
-.product.details h3{
-    font-size: 18px; 
-}
+
 
 .designs h1{
     width: 80%;
