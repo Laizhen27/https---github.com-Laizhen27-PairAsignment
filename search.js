@@ -11,12 +11,11 @@ $(document).ready(function(){
         }
     }
     $.ajax(settings).done(function (response){
-        console.log(response);
         for(var i=0; i < response.length; i++){
             
             $("div.product-list").append(
                 '<a href="#"> <div class="product">\
-                <img src = "'+response[i].image+'">\
+                <img id = "'+response[i].productid+'" src = "'+response[i].image+'">\
                 <div class="details">\
                     <h2 id="results">'+ response[i].name + '</h2>\
                     <h3>'+"$ " + response[i].price + '</h3> </a>'         
@@ -26,6 +25,19 @@ $(document).ready(function(){
             // var product = document.getElementsByClassName('product')
             // product.hide();
         }
+        
+        $("div.product-list").on("click","a",function(){
+            for (var i = 0; i < response.length;i++){
+                if(this.children[0].id == response[i].productid)
+                {
+                    sessionStorage.setItem("product",JSON.stringify(response[i]));
+                    console.log(this.children[0].id)
+    
+                }
+            }
+             window.location.href = "product.html";
+
+        })
     })
 
 })
@@ -34,8 +46,8 @@ function Search(){
     var searchresult = $('#search-item').val().toUpperCase();
     for(var i =0 ; i < items.length; i++){
         let product = items[i].children[1].children[0].children[0].innerText
-        console.log(searchresult);
-        console.log(product);
+        // console.log(searchresult);
+        // console.log(product);
         if ( searchresult == "" ){
             items[i].style.display = "none";
         }

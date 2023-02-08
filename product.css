@@ -1,0 +1,31 @@
+.details{
+    padding-top:2%;
+}
+.details img{
+    width: 550px;
+    height: 650px;  
+    margin: 50px 50px;
+    float:left;
+    border: 1px solid black;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.info{
+    float:center;
+    margin-left: 10%;
+    margin-top: 50px;
+}
+.info h1{
+    width: 70%;
+}
+#quantity{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.buttons{
+    padding-top: 50px;
+}
+.buttons button{
+    width: 30px;
+    height: 30px;
+}
