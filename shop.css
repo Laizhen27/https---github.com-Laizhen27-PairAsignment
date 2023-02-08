@@ -1,5 +1,5 @@
 
-#product1 a-container{
+#product1 .pro-container{
     display: flex;
     justify-content: space-between ;
     padding: 30px;
@@ -9,7 +9,7 @@
     text-decoration: none;
     color:black
 }
-a .pro{
+#product1 a .pro{
     width: 25%;
     min-width: 250px;
     /* padding: 15px 12px; */
@@ -22,7 +22,7 @@ a .pro{
 
 
 }
-#product1 .pro:hover{
+#product1  .pro:hover{
     box-shadow: 30px 30px 40px rgba(0, 0, 0, 0.5);
 }
 #product1 .pro img{
@@ -53,41 +53,4 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-footer .col1{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 30px;
-}
-footer .col3{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 30px;
-}
-footer h4{
-    font-size: 15px;
-    padding-bottom: 30px;
-}
-footer p{
-    font-size: 12px;
-    margin: 0 0 10px 0;
-}
-footer a{
-    font-size: 15px;
-    text-decoration: none;
-    color: aquamarine;
-    margin-bottom: 10px;
-}
-footer .col3{
-    flex-direction: column;
-}
-footer .copyright{
-    align-items: baseline;
-    align-items: center;
 }

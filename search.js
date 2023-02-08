@@ -36,7 +36,7 @@ function Search(){
         let product = items[i].children[1].children[0].children[0].innerText
         console.log(searchresult);
         console.log(product);
-        if (searchresult == ""){
+        if ( searchresult == "" ){
             items[i].style.display = "none";
         }
         else if (product.includes(searchresult) == true){
