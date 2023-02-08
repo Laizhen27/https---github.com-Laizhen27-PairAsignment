@@ -1,5 +1,5 @@
 
-#product1 .pro-container{
+#product1 a-container{
     display: flex;
     justify-content: space-between ;
     padding: 30px;
@@ -9,7 +9,7 @@
     text-decoration: none;
     color:black
 }
-#product1 a .pro{
+a .pro{
     width: 25%;
     min-width: 250px;
     /* padding: 15px 12px; */
