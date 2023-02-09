@@ -11,19 +11,16 @@ $(document).ready(function(){
     }
   }
     $.ajax(settings).done(function (response){
-      console.log(response);
       cat_list = []
       for (var i = 0;i<response.length;i++){
         if(cat_list.indexOf(response[i].category) == -1){
           cat_list.push(response[i].category)
         }
       }
-      console.log(cat_list);
       for (var i = 0;i<cat_list.length;i++){
         for(var j=0; j < response.length; j++){
           if(response[j].category == cat_list[i])
           {
-            console.log(response[j].image)
             $("div.design-box-gallery").append(
               '<div class="design-box">\
               <img src = "'+response[j].image+'">\
@@ -47,7 +44,6 @@ $(document).ready(function(){
             
           }
         }
-        console.log(cat_item);
         sessionStorage.setItem("listing_details",JSON.stringify(cat_item));
         
         window.location.href = "shop.html";

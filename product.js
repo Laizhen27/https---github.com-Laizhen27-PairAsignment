@@ -9,20 +9,46 @@ $(document).ready(function () {
      </div>\
  </div>'
    )
+   $("a#cart").click(function (e) { 
+    e.preventDefault();
+    size = document.getElementById('size');
+    const qty = document.getElementById("quantity");
+    if(size.innerText.includes("Select Size"))
+    {
+      alert('Please Select your Shirt size')
+    }
+    else{
+      let jsondata ={
+        "productid":product.productid,
+        "price":product.price,
+        "name":product.name,
+        "size":size.innerText,
+        "quantity":qty.innerText,
+      }
+      console.log(jsondata);
+      localStorage.setItem("cart",JSON.stringify(jsondata))
+    }
+    console.log("clicked")
+   });
 })
 
 
 function Click(clicks){
   const qty = document.getElementById("quantity");
   const sum = parseInt(qty.innerText) + clicks
-  if(sum < 0){
+  if(sum < 1){
     e.preventdefault();
   }
   else{
     console.log(sum + clicks);
     qty.innerText = sum
   }
+};
+
+function Size(size){  
+  displaysize = document.getElementById('size')
+  displaysize.innerText = size
+}
 
 
-  }
 

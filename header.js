@@ -3,7 +3,7 @@ $(document).ready(function () {
         '<div class="container" id="nav">\
           <a href="index.html">\
             <img src="Icon.png" class="logo"alt="logo"/></a>\
-          <a href ="signup.html"><img src="Icon/profile.png" class ="profile"></a>\
+          <a href ="signup.html" class = "accountpic"><img src="Icon/profile.png" class ="profile"></a>\
           <a href ="checkout.html"><img src ="Icon/bag.png" class ="bag"></a>\
           <nav>\
             <input type="checkbox" id="check" />\
@@ -17,6 +17,10 @@ $(document).ready(function () {
                 <li><a href="blog.html">Blog</a></li>\
             </ul>\     </nav>\</div>'
     )
+    if (localStorage.getItem("isloggedin") == "true"){
+        var a = document.querySelector("a.accountpic");
+        a.href = "profile.html";
+    }
     $("footer.footer").append(
         ' <div class="col1">\
         <img src="" alt="">\
