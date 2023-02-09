@@ -25,7 +25,8 @@ $(document).ready(function(){
                 // console.log(response[i].password);
                 if(email == response[i].email && password == response[i].password){
                     localStorage.setItem("profile",JSON.stringify(response[i]));
-                    $("container-login").trigger("reset");
+                    window.location.href = "index.html";
+                    localStorage.setItem("isloggedin",true)
                     console.log(response[i]);
                 }
              }

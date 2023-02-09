@@ -1,10 +1,10 @@
 .details{
-    padding-top:2%;
+    padding-top:10px;
 }
 .details img{
-    width: 550px;
-    height: 650px;  
-    margin: 50px 50px;
+    width: 450px;
+    height: 550px;  
+    margin-right: 50px;
     float:left;
     border: 1px solid black;
     border-radius: 5px;
@@ -14,9 +14,6 @@
     float:center;
     margin-left: 10%;
     margin-top: 50px;
-}
-.info h1{
-    width: 70%;
 }
 #quantity{
     margin-left: 20px;
@@ -29,3 +26,19 @@
     width: 30px;
     height: 30px;
 }
+
+#cart{
+    font-size:100px;
+    float: right;
+    margin-right: 20%;
+}
+.scroll {
+    float:right;
+    margin-left: 100px;
+    background-color: green;
+    width: 500px;
+    height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+            }

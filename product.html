@@ -9,10 +9,16 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="product.js" defer></script>
     <link rel="stylesheet" href="product.css">
 </head>
 <body>
+    <script src="header.js" defer></script> 
+    <link rel="stylesheet" href="style.css" />
+    <header>
+        <!-- Nav Bar -->
+      </header>
     <div class="container">
         <div class="details">
             <!-- <img src="product/GraphicTeeshirt1.avif">
@@ -20,19 +26,32 @@
                 <h1>Name</h1>
                 <h1>$##,##</h1>
             </div> -->
-            
         </div>
     </div>
+    <div class="scroll">It is a good platform to learn programming.
+        It is an educational website. Prepare for the Recruitment drive
+        of product based companies like Microsoft, Amazon, Adobe etc with
+        a free online placement preparation course. The course focuses
+        on various MCQ's & Coding question likely to be asked in the
+        interviews & make your upcoming placement season efficient and
+        successful. Also, any geeks can help other geeks by writing
+        articles on the GeeksforGeeks, publishing articles follow few
+        steps that are Articles that need little modification/improvement
+        from reviewers are published first. To quickly get your articles
+        reviewed, please refer existing articles, their formatting style,
+        coding style, and try to make you are close to them. In case you
+        are a beginner, you may refer Guidelines to write an Article
+        </div>    
     <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="size">
                 Select Size
         </a>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">XS</a></li>
-            <li><a class="dropdown-item" href="#">S</a></li>
-            <li><a class="dropdown-item" href="#">M</a></li>
-            <li><a class="dropdown-item" href="#">L</a></li>
-            <li><a class="dropdown-item" href="#">Xl</a></li>
+            <li value="XS"><a class="dropdown-item"onclick="Size('XS')">XS</a></li>
+            <li><a class="dropdown-item" value="S" onclick="Size('S')">S</a></li>
+            <li><a class="dropdown-item" value="M" onclick="Size('M')">M</a></li>
+            <li value="L"><a class="dropdown-item"onclick="Size('L')" >L</a></li>
+            <li><a class="dropdown-item" value="XL" onclick="Size('XL')">XL</a></li>
         </ul>
     </div>  
     <div class="buttons">
@@ -40,7 +59,7 @@
         <span id = "quantity">0</span>
         <button onclick="Click(1)">+</button>       
     </div>   
- 
+    <a id ="cart" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 
-</body>
+    </body>
 </html>

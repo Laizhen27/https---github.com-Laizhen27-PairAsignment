@@ -9,9 +9,19 @@ $(document).ready(function () {
      </div>\
  </div>'
    )
+   /*document.getElementById("cart").click("a",function(){
+    displaysize = document.getElementById('cart');
+    console.log(displaysize);
+    if(displaysize.innerText == "Select Size")
+    {
+      alert('Please Select A size')
+    }
+   })*/
+   $("a#cart").click(function (e) { 
+    e.preventDefault();
+    console.log("clicked")
+   });
 })
-
-
 function Click(clicks){
   const qty = document.getElementById("quantity");
   const sum = parseInt(qty.innerText) + clicks
@@ -24,5 +34,12 @@ function Click(clicks){
   }
 
 
-  }
+  
+};
+function Size(size){  
+  displaysize = document.getElementById('size')
+  displaysize.innerText = size
+}
+
+
 
