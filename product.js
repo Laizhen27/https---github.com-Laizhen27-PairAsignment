@@ -18,12 +18,15 @@ $(document).ready(function () {
       alert('Please Select your Shirt size')
     }
     else{
+      console.log(product);
       let jsondata ={
+        "id":product._id,
         "productid":product.productid,
+        "image":product.image,
         "price":product.price,
         "name":product.name,
         "size":size.innerText,
-        "quantity":qty.innerText,
+        "quantity":qty.innerText,      
       }
       console.log(jsondata);
       localStorage.setItem("cart",JSON.stringify(jsondata))

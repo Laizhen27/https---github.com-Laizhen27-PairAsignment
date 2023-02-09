@@ -1,0 +1,17 @@
+.product{
+    display: flex;
+    align-items: center;
+}
+.product-list a{
+    color:black;
+    text-decoration: none;
+}
+.product img{
+    width:70px;
+    height:70px;
+    object-fit: cover;
+    border-radius: 5px;
+    float: left;
+    margin-right: 50px;
+    
+}

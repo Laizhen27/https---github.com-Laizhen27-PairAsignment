@@ -4,7 +4,7 @@ $(document).ready(function () {
           <a href="index.html">\
             <img src="Icon.png" class="logo"alt="logo"/></a>\
           <a href ="signup.html" class = "accountpic"><img src="Icon/profile.png" class ="profile"></a>\
-          <a href ="checkout.html"><img src ="Icon/bag.png" class ="bag"></a>\
+          <a href ="cart.html"><img src ="Icon/bag.png" class ="bag"></a>\
           <nav>\
             <input type="checkbox" id="check" />\
             <label for="check" class="checkbtn">\

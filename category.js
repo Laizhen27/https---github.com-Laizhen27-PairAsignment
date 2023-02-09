@@ -27,7 +27,7 @@ $(document).ready(function(){
                       <a href = "#"><div class="hover-effect"></div>\
                       <div class="design-box-desc">\
                           <h3>'+cat_list[i]+'</h3><hr>\
-                          <p>AAAAAAA</p>\
+                          <p>'+response[j].brand.toUpperCase()+'</p>\
                       </div></a>\
                 </div>'
             );
