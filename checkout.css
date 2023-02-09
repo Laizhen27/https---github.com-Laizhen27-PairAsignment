@@ -60,3 +60,17 @@
     padding: 20px 12px;
     box-sizing: border-box;
 }
+.text-box{
+    display: flex;
+    justify-content: space-around;
+}
+.text-box .right button{
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.text-box-2 button{
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}

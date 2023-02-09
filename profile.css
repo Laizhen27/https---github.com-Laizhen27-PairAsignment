@@ -1,0 +1,26 @@
+.text-box{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 1%;
+    background: rgba(0,0,0,0.2);
+    border-radius: 20px;
+    margin-bottom: 1%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+.text-box .right{
+    margin-top: 25px;
+}
+.text-box .right h4{
+    margin-top: 90px;
+}
+.text-box .left{
+    text-align: left;
+}
+.text-box .right button{
+    font-size: 15px;
+    border-radius: 25px;
+}
