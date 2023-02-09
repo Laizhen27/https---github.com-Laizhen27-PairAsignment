@@ -45,13 +45,14 @@ function Search(){
     let items = document.querySelectorAll('div.product')
     var searchresult = $('#search-item').val().toUpperCase();
     for(var i =0 ; i < items.length; i++){
-        let product = items[i].children[1].children[0].children[0].innerText
-        // console.log(searchresult);
+        let product = items[i].children[1].children[0].children[0].innerText.toUpperCase();
+        console.log(searchresult);
         // console.log(product);
         if ( searchresult == "" ){
             items[i].style.display = "none";
         }
         else if (product.includes(searchresult) == true){
+            console.log(product);
             items[i].style.display = "block";
         }
         else{

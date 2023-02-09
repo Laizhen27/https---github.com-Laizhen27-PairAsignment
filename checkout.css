@@ -1,7 +1,7 @@
 .checkout h3{
     width: 80%;
     text-align: left;
-    color: white;
+    color: black;
     font-size: 38px;
     font-weight: 600;
     padding-left: 110px;
@@ -34,6 +34,9 @@
     width: 30%;
     border-radius: 20px;
 }
+.text-box .left{
+    width:500px;
+}
 .text-box-1{
     display: flex;
     justify-content: space-between;
@@ -63,6 +66,9 @@
 .text-box{
     display: flex;
     justify-content: space-around;
+}
+.text-box img{
+    float: left;
 }
 .text-box .right button{
     border-radius: 10px;
