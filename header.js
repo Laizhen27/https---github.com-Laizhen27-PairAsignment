@@ -31,10 +31,10 @@ $(document).ready(function () {
         <div class="col2">\
             <h4>Follow Us</h4>\
             <div class="icon">\
-                <i class="fab fa-facebook-f"></i>\
-                <i class="fab fa-twitter"></i>\
-                <i class="fab fa-instagram"></i>\
-                <i class="fab fa-youtube"></i>\
+                <i class="fa fa-facebook-f"></i>\
+                <i class="fa fa-twitter"></i>\
+                <i class="fa fa-instagram"></i>\
+                <i class="fa fa-youtube"></i>\
             </div>\
         </div>\
     </div>\

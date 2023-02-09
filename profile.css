@@ -43,3 +43,12 @@
     border-radius: 25px;
     font-size: 25px;
 }
+.button:hover {
+    background-color: grey;
+}
+
+.button:active {
+  background-color: red;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
