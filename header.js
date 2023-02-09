@@ -19,7 +19,7 @@ $(document).ready(function () {
     )
     if (localStorage.getItem("isloggedin") == "true"){
         var a = document.querySelector("a.accountpic");
-        a.href = "account.html";
+        a.href = "profile.html";
     }
     $("footer.footer").append(
         ' <div class="col1">\
