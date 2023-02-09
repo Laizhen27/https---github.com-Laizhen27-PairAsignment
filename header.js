@@ -21,9 +21,9 @@ $(document).ready(function () {
         ' <div class="col1">\
         <img src="" alt="">\
         <h4>Contact</h4>\
-        <p><strong>Showroom Address:</strong></p>\
-        <p><strong>Hotline:</strong></p>\
-        <p><strong>Hours:</strong></p>\
+        <p><strong>Showroom Address:</strong>3 @ Otis Road</p>\
+        <p><strong>Hotline:</strong>92345678</p>\
+        <p><strong>Hours:</strong>7am - 7pm</p>\
         <div class="col2">\
             <h4>Follow Us</h4>\
             <div class="icon">\

@@ -1,28 +1,26 @@
 
 #product1 .pro-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between ;
     padding: 30px;
     flex-wrap: wrap;
 }
-#product1 a{
+.pro a {
     text-decoration: none;
-    color:black
+    color:black;
 }
-a .pro{
+#product1 .pro{
     width: 25%;
     min-width: 250px;
-    /* padding: 15px 12px; */
+    padding: 15px 12px;
     border: 2px solid grey;
     border-radius: 25px;
     cursor: pointer;
     box-shadow: 30px 30px 40px rgba(0, 0, 0, 0.05);
     margin: 20px 0;
     transition: 0.5s ease;
-
-
 }
-#product1  .pro:hover{
+#product1 .pro:hover{
     box-shadow: 30px 30px 40px rgba(0, 0, 0, 0.5);
 }
 #product1 .pro img{
@@ -34,7 +32,6 @@ a .pro{
     padding: 15px 0;
 }
 #product1 .pro .des span{
-    color: aquamarine;
     font-size: 10px;
 }
 #product1 .pro h5{
@@ -48,9 +45,4 @@ a .pro{
 }
 #product1 {
     padding-left: 30px;
-}
-footer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
 }

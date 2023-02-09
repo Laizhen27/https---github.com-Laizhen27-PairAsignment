@@ -1,7 +1,8 @@
-$("#update-contact-container").hide();
-$("#add-update-msg").hide();
+
 //[STEP 0]: Make sure our document is A-OK
 $(document).ready(function () {
+  $("#update-contact-container").hide();
+$("#add-update-msg").hide();
   $("p.Invalidname").hide();
   $("p.Invalidemail").hide();
   $("p.Invalidhpno").hide();
@@ -70,49 +71,39 @@ $(document).ready(function () {
     });
   });//end click 
 });
-function valid()
-{
-  if(SignUpName != "")
-  {
-      if(SignUpEmail.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/))
-      {
-        if(SignUpPhoneNo.length ==8)
-        {
-            if(SignUpExpiry <= getdate() )
-            {
-                
-            }
-            else
-            {
-              $("p.Invaliddate").show();
-            }
-        }
-        else
-        {
-          $("p.Invalidhpno").show();
-        }     
-      }
-      else
-      {
-        $("p.Invalidemail").show();
-      }
-        
-    }
-  else
-  {
-    $("p.Invalidname").show();
-  }
-}
 
-function validatEmail(){
-  if(SignUpEmail.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/))
+function validateEmail(){
+  var input = $('#signup-email').val();
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (input.match(mailformat))
   {
     $("p.Invalidemail").hide();
   }
   else{
     $("p.Invalidemail").show();
   }
-
+}
+function validatehpno(){
+  var input = $('#signup-email').val();
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (input.match(mailformat))
+  {
+    $("p.Invalidemail").hide();
+  }
+  else{
+    $("p.Invalidemail").show();
+  }
+}
+function validateEmail(){
+  var input = $('#signup-email').val();
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (input.match(mailformat))
+  {
+    $("p.Invalidemail").hide();
+  }
+  else{
+    $("p.Invalidemail").show();
+  }
 }
 
 
