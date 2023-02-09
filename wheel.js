@@ -7,13 +7,17 @@ console.log(value%360)
 //Spin Function
 const finalValue = document.getElementById("final-value");
 spinBtn.onclick = function(){
-    value += Math.ceil(Math.random() * 3600);
+    value += Math.ceil(Math.random() * 36000);
     wheel.style.transform = "rotate(" +value+"deg)"
     let award = Results(value);
     if(award != null){// display points awarded
         result.innerHTML = award;
         console.log(value%360)
         console.log(award)
+    var effect = new Audio("Wheel.mp3")
+    effect.oncanplaythrough = function(){
+      effect.play()
+    }
 }
 
 
