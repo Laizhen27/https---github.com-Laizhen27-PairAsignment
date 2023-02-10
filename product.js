@@ -1,6 +1,5 @@
 $(document).ready(function () {
   var product = JSON.parse(sessionStorage.getItem("product"))
-
   var added = JSON.parse(localStorage.getItem("cartfilled"))
 
   $('div.container').append(
@@ -15,43 +14,50 @@ $(document).ready(function () {
    $('#animation').hide();
    $("a#cart").click(function (e) { 
     e.preventDefault();
-    size = document.getElementById('size');
-    const qty = document.getElementById("quantity");
-    if(size.innerText.includes("Select Size"))
-    {
-      alert('Please Select your Shirt size')
+    var loggedin = JSON.parse(localStorage.getItem("isloggedin"))
+    if(loggedin != true){
+        window.location.href = "signup.html";
     }
     else{
-      console.log(product);
-      $("a#cart").hide();
-      $('#animation').show();
-      let jsondata ={
-        "id":product._id,
-        "productid":product.productid,
-        "image":product.image,
-        "price":product.price,
-        "name":product.name,
-        "size":size.innerText,
-        "quantity":qty.innerText,      
-      }
-      console.log(jsondata);
-      if(added == true){
-        var existincart = JSON.parse(localStorage.getItem("cart"))
-        let items = []
-        existincart.forEach(element => {
-          items.push(element);
-        });
-        items.push(jsondata)
-        console.log(product)
-        console.log(items);
-        localStorage.setItem("cart",JSON.stringify(items))
+      size = document.getElementById('size');
+      const qty = document.getElementById("quantity");
+      if(size.innerText.includes("Select Size"))
+      {
+        alert('Please Select your Shirt size')
       }
       else{
-        let items = []
-        items.push(jsondata)
-        localStorage.setItem("cart",JSON.stringify(items))
-        localStorage.setItem("cartfilled",true)  
+        console.log(product);
+        $("a#cart").hide();
+        $('#animation').show();
+        let jsondata ={
+          "id":product._id,
+          "productid":product.productid,
+          "image":product.image,
+          "price":product.price,
+          "name":product.name,
+          "size":size.innerText,
+          "quantity":qty.innerText,      
+        }
+        console.log(jsondata);
+        if(added == true){
+          var existincart = JSON.parse(localStorage.getItem("cart"))
+          let items = []
+          existincart.forEach(element => {
+            items.push(element);
+          });
+          items.push(jsondata)
+          console.log(product)
+          console.log(items);
+          localStorage.setItem("cart",JSON.stringify(items))
+        }
+        else{
+          let items = []
+          items.push(jsondata)
+          localStorage.setItem("cart",JSON.stringify(items))
+          localStorage.setItem("cartfilled",true)  
+        }
       }
+  
     }
     console.log("clicked")
    });

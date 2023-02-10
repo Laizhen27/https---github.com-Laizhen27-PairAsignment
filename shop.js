@@ -4,8 +4,7 @@ $(document).ready(function () {
     product.forEach(details => {
         var div = document.querySelector("div.pro-container");
         var divpro = div.appendChild(document.createElement("div"));// creating element in java script 
-        divpro.className = "pro";// creating class name
-        
+        divpro.className = "pro";// creating class name    
         var a = divpro.appendChild(document.createElement("a"))
         a.href = "#"
         datashit = a.appendChild(document.createElement("img"));// creating element in java script 
