@@ -1,6 +1,9 @@
 $(document).ready(function () {
     var cart = JSON.parse(localStorage.getItem("cart"))
-    var added = JSON.parse(localStorage.getItem("cartfilled"))
+    var loggedin = JSON.parse(localStorage.getItem("isloggedin"))
+    if(loggedin != true){
+        window.location.href = "signup.html";
+    }
     Display();
     console.log(document.getElementById("checkout"))
     $("a#checkout").click(function (e) { 
@@ -29,7 +32,7 @@ $(document).ready(function () {
             console.log(response);
             });
             localStorage.setItem("cart",JSON.stringify([]))
-            location.reload();
+            window.location.href = "cart.html";
         });
        
         
@@ -116,6 +119,7 @@ function Click(clicks){
 
     }
     localStorage.setItem("cart",JSON.stringify(items))
+    window.location.href = "cart.html";
     Display();
     // location.reload();
 
