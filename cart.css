@@ -5,8 +5,10 @@
 }
 
 .wrapper{
+    padding-top: 30px;
     max-width:100vh;
     margin: 0 auto;
+    
 }
 .wrapper h1{
     padding: 30px 0;
@@ -15,6 +17,8 @@
 }
 .cart-container{
     display: flex;
+    transition: ease-in-out 3s;
+    
 }
 .cart{
     flex:75%;
@@ -28,6 +32,7 @@
     background-color: white;
     transition: all .6s ease;
     box-shadow: rgba(100,100,111,0.2) 0 7px 29px 0;
+
 }
 .card:hover{
     transform: scale(1.02);
@@ -97,4 +102,8 @@
 }
 .display-amount #checkout:hover{
     background-color: green;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
