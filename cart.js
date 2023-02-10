@@ -29,7 +29,7 @@ $(document).ready(function () {
             console.log(response);
             });
             localStorage.setItem("cart",JSON.stringify([]))
-            location.reload();
+            window.location.href = "cart.html";
         });
        
         
