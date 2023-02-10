@@ -31,7 +31,7 @@ $(document).ready(function () {
         $('#animation').show();
         let jsondata ={
           "id":product._id,
-          "productid":product.productid,
+          "productid":product.productid+size.innerText,
           "image":product.image,
           "price":product.price,
           "name":product.name,
