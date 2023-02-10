@@ -45,8 +45,21 @@ body, html {
     float:center;
     margin-left: 28%;
 }
-@media (max-width:411px) {
+@media (max-width:1000px) {
     .parallax {
       background-attachment: scroll;
+      width: 412px;
     }
-  }
+    .parallax .info1 .aboutus{
+     font-size: 30px;
+     width: auto;
+    }
+    .parallax1{
+        background-attachment: scroll;
+        width: 412px;
+    }
+    .parallax1 .info2 .shop{
+        font-size: 30px;
+        width: auto;
+    }
+}

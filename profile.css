@@ -55,3 +55,8 @@
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+@media (max-width: 411px){
+    .text-box{
+        width: 412px;
+    }
+}
