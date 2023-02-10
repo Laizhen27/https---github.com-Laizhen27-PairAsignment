@@ -173,4 +173,66 @@ footer .copyright{
     align-items: baseline;
     align-items: center;
 }
-@media
+@media(max-width: 411px){
+    .logo{
+        padding-top: 10px;
+        margin-left: 0;
+        float:left;
+        z-index: 1;
+        position:sticky;
+        width:50px;
+        width: 5px;
+        height: 5px;
+    }
+    .bag{
+        float:right;
+        padding-top: 1px;
+        width: 5px;
+        height: 5px;
+    }
+    #text img{
+        object-fit: scale-down;
+    }
+}
+@media (max-width: 411px){
+    nav ul li a{
+        font-size:20px;
+    }
+}
+@media (max-width: 1100px){
+    .checkbtn{
+        display:block;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height:auto;
+        background: rgb(112, 112, 112);
+        top:90px;
+        left:-150%;
+        /* text-align: center; */
+        transition: all .5s;
+        z-index: 5;
+        float:left
+
+    }
+    nav ul li{
+        display: block;
+        margin:50px 0;
+        line-height:10px;
+        z-index: 5;
+    }
+    nav ul li a{
+        font-size:25px;
+        z-index: 5;
+    }
+    nav ul ul li a{
+        font-size:25px;
+        z-index: 5;
+    }
+    
+    #check:checked ~ul{
+        left:0;
+        z-index: 5;
+    }
+}
