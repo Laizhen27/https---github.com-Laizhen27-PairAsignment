@@ -18,3 +18,8 @@ body{
     margin-right:20% ;
     height:10%;
 }
+@media (max-width: 413px){
+    body{
+        width: 100px;
+    }
+}
