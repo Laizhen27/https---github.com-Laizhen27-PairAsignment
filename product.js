@@ -1,5 +1,8 @@
 $(document).ready(function () {
   var product = JSON.parse(sessionStorage.getItem("product"))
+
+  var added = JSON.parse(localStorage.getItem("cartfilled"))
+
   $('div.container').append(
     '<div class = "details">\
      <img src="'+product.image+'">\
@@ -9,6 +12,7 @@ $(document).ready(function () {
      </div>\
  </div>'
    )
+   $('#animation').hide();
    $("a#cart").click(function (e) { 
     e.preventDefault();
     size = document.getElementById('size');
@@ -19,6 +23,8 @@ $(document).ready(function () {
     }
     else{
       console.log(product);
+      $("a#cart").hide();
+      $('#animation').show();
       let jsondata ={
         "id":product._id,
         "productid":product.productid,
@@ -29,7 +35,23 @@ $(document).ready(function () {
         "quantity":qty.innerText,      
       }
       console.log(jsondata);
-      localStorage.setItem("cart",JSON.stringify(jsondata))
+      if(added == true){
+        var existincart = JSON.parse(localStorage.getItem("cart"))
+        let items = []
+        existincart.forEach(element => {
+          items.push(element);
+        });
+        items.push(jsondata)
+        console.log(product)
+        console.log(items);
+        localStorage.setItem("cart",JSON.stringify(items))
+      }
+      else{
+        let items = []
+        items.push(jsondata)
+        localStorage.setItem("cart",JSON.stringify(items))
+        localStorage.setItem("cartfilled",true)  
+      }
     }
     console.log("clicked")
    });
@@ -52,6 +74,3 @@ function Size(size){
   displaysize = document.getElementById('size')
   displaysize.innerText = size
 }
-
-
-
