@@ -17,5 +17,33 @@ will lead them to a category page where they can select the product category tha
 <p>Feature 1:</p>
 <h2>Technologies Used</h2>
 <p>The languages used are: HTML, CSS, Javascript, API, Lottie</p>
+<h2>Testing</h2>
+<p>Shop page:<br>
+    1. When it is not signed in, go to "Shop" page
+    2. Click into any category
+    3. Click on the "Cart" logo
+    4. It will display an error to prompt the user to login or signup before he can proceed
+    <br><br>
+    Reward page:<br>
+    1. When it is not signed in, go to "Reward page"
+    2. Click on the wheel to spin it
+    3. An error message will be shown to prompt the user to login or signup before he can proceed
+    <br><br>
+    Cart page:<br>
+    1. When it is not signed in, go to "Cart" page by clicking on the cart logo
+    2. It will display an error message to prompt the user to either login or signup before he can proceed
+    <br><br>
+    Choosing size on "Shop" page:<br>
+    1. Click on "Shop"
+    2. Select and click on any category
+    3. Click on the product chosen
+    4. Click on the "Cart" logo to proceed
+    5. When the size of the product is not selected, an error message will show up to request the user to select it before he can proceed
+    <br><br>
+    Sign up/Log in page:<br>
+    1. Click on the "log in"
+    2. When any one of the field is not filled in and the user tries to proceed, an error message will be displayed to fill up the field so that he can proceed
+    </p>
+
 <h2>Credits</h2>
 <p>https://www.uniqlo.com/sg/en/</p>
