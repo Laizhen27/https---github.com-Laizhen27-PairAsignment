@@ -13,3 +13,9 @@ Once buyers land on this website, they can see featured products that maybe of i
 will lead them to a category page where they can select the product category that they want. After clicking into the category, they can scroll and choose the specific type of designs and prints of the products they want. Followed by, there will be options to choose the size and the quantity for the product they want and simply add to cart. After that,users can head over to the checkout page to checkout with their cart filled. Our website also has a function where by users can remove the items that they have selected if they ever change their mind for which they may like to change things up. These features can be found in the "Cart" icon.</p>
 <p>As a user, users are looking for better deals. We have gamification function that is a wheel that can be spun by users to earn points. Thesee points that are earned can be used by the user to offset some of the cost for the products that they have selected. This feature can be found in the "Reward" page of the website.</p>
 <p>As a user, users often want a simple, quick and easy method to shop for the products they want online. For that our website is tailor made for that. It is intuitive and easy to use without complicated functions or buttons that may result in a confusing experience when using the website. We have planned out each individual page of the entire website on a software application Adobe XD, to capture and prototype on our idea as we progress in our journey of creating this website</p>
+<h2>Features</h2>
+<p>Feature 1:</p>
+<h2>Technologies Used</h2>
+<p>The languages used are: HTML, CSS, Javascript, API, Lottie</p>
+<h2>Credits</h2>
+<p>https://www.uniqlo.com/sg/en/</p>
