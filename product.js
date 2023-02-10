@@ -36,7 +36,8 @@ $(document).ready(function () {
           "price":product.price,
           "name":product.name,
           "size":size.innerText,
-          "quantity":qty.innerText,      
+          "quantity":qty.innerText,  
+          "sold":product.sold    
         }
         console.log(jsondata);
         if(added == true){
