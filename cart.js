@@ -6,6 +6,27 @@ $(document).ready(function () {
     }
     Display();
     console.log(document.getElementById("checkout"))
+    $("a.btn-remove").click(function (e) { 
+        var removeid = ($("a.btn-remove").attr("id"))
+        e.preventDefault();
+        var cart = JSON.parse(localStorage.getItem("cart"))
+        let items = []
+        cart.forEach(element => {     
+            if(element.productid != removeid){
+                items.push(element);
+            }
+        });
+        console.log(items)
+        if(items.length == 0){
+            localStorage.setItem("cartfilled",false)
+
+        }
+        localStorage.setItem("cart",JSON.stringify(items))
+        window.location.href = "cart.html";
+        Display();
+
+        
+    });
     $("a#checkout").click(function (e) { 
         localStorage.setItem("cartfilled",false)
         console.log("yes");
@@ -31,7 +52,7 @@ $(document).ready(function () {
             $.ajax(settings).done(function (response) {
             console.log(response);
             });
-            localStorage.setItem("cart",JSON.stringify([]))
+            localStorage.clear("cart")
             window.location.href = "cart.html";
         });
        
@@ -55,9 +76,9 @@ function Click(clicks){
     var added = JSON.parse(localStorage.getItem("cartfilled"))
     var amount = 0
     var finalamount
-        if(added == true){
+        if(added == true)
+        {
             console.log(cart)
-            console.log(cart.Length);
             cart.forEach(item => {
                 amount+=item.price
                 $(".wrapper").append(
@@ -65,16 +86,19 @@ function Click(clicks){
                         <div class="cart">\
                             <div class="card" id='+item.productid+'>\
                                 <img src='+item.image+'>\
-                                <div class="details">\
-                                <h3>'+item.name+'</h3>\
-                                <h4>'+"Price :"+item.price+'</h4>\
-                                <h4>'+"Size :"+item.size+'</h4>\
-                                <div class="buttons">\
-                                    <button onclick="Click(-1)">-</button>\
-                                    <span id = "quantity">'+item.quantity+'</span>\
-                                    <button onclick="Click(1)">+</button></div>\ <div class="btn-remove" onclick="Remove('+item.productid+')"><i class="fa fa-trash"></i>\
-                                    <span class="remove">Remove</span>\
-                                </div>\
+                                    <div class="details">\
+                                        <h3>'+item.name+'</h3>\
+                                        <h4>'+"Price :"+item.price+'</h4>\
+                                        <h4>'+"Size :"+item.size+'</h4>\
+                                        <div class="buttons">\
+                                            <button onclick="Click(-1)">-</button>\
+                                            <span id = "quantity">'+item.quantity+'</span>\
+                                            <button onclick="Click(1)">+</button>\
+                                        </div>\
+                                        <a href="#"class="btn-remove" id='+item.productid+'>\
+                                        <i class="fa fa-trash"></i><span class="remove">Remove</span>\
+                                        </a>\
+                                    </div>\
                             </div>\
                         </div>\
                     </div>'
@@ -106,21 +130,5 @@ function Click(clicks){
 
   function Remove(removeid){
     console.log(removeid)
-    var cart = JSON.parse(localStorage.getItem("cart"))
-    let items = []
-    cart.forEach(element => {     
-        if(element.productid != removeid){
-            items.push(element);
-        }
-    });
-    console.log(items)
-    if(items.length == 0){
-        localStorage.setItem("cartfilled",false)
-
-    }
-    localStorage.setItem("cart",JSON.stringify(items))
-    window.location.href = "cart.html";
-    Display();
-    // location.reload();
-
+    
     }
