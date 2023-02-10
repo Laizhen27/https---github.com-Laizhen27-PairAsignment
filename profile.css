@@ -55,8 +55,14 @@
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-@media (max-width: 411px){
+@media (max-width: 413px){
     .text-box{
         width: 412px;
+    }
+    .text-box .left h4{
+        font-size: 30px;
+    }
+    .text-box .right h4{
+        margin-top: 380px;
     }
 }
