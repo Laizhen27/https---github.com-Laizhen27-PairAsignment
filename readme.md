@@ -12,11 +12,28 @@ our shop comes in, it provides attractive prices on well made clothing pieces th
 Once buyers land on this website, they can see featured products that maybe of interested. These pieces are specially curated by us to present the best products on the site. Moreover, they can click on the "Shop" which
 will lead them to a category page where they can select the product category that they want. After clicking into the category, they can scroll and choose the specific type of designs and prints of the products they want. Followed by, there will be options to choose the size and the quantity for the product they want and simply add to cart. After that,users can head over to the checkout page to checkout with their cart filled. Our website also has a function where by users can remove the items that they have selected if they ever change their mind for which they may like to change things up. These features can be found in the "Cart" icon.<
 * As a user, users are looking for better deals. We have gamification function that is a wheel that can be spun by users to earn points. Thesee points that are earned can be used by the user to offset some of the cost for the products that they have selected. This feature can be found in the "Reward" page of the website.</p>
-* As a user, users often want a simple, quick and easy method to shop for the products they want online. For that our website is tailor made for that. It is intuitive and easy to use without complicated functions or buttons that may result in a confusing experience when using the website. We have planned out each individual page of the entire website on a software application Adobe XD, to capture and prototype on our idea as we progress in our journey of creating this website</p>
+* As a user, users often want a simple, quick and easy method to shop for the products they want online. For that our website is tailor made for that. It is intuitive and easy to use without complicated functions or buttons that may result in a confusing experience when using the website. We have planned out each individual page of the entire website on a software application Adobe XD, to capture and prototype on our idea as we progress in our journey of creating this website
 ### Features
 #### Feature 1:
+* Allow User to Log in / Log Out
+* User be able to shirt throughout the shop
+* Adding Item Cart 
+* Check Out Item
+* Earn Points through spinning the wheel(gamification feature)
+* Use points to offset your purchase
+#### Feature Left to implement
+* I would hope that our cart be able to have payment api so user can really check out
+* Able to send order summary to user's email
+
 ### Technologies Used
-#### The languages used are: HTML, CSS, Javascript, API, Lottie
+* HTML
+* CSS
+* Javascript(mostly to replace html)
+* API 
+* Lottie
+* jquery
+* bootstrap
+* font-awesome
 ### Testing
 #### Shop page:
 * When it is not signed in, go to "Shop" page
