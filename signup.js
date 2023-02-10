@@ -37,7 +37,8 @@ $("#add-update-msg").hide();
       "creditcard":SignUpCreditCard,
       "expiry":SignUpExpiry,
       "csv": SignUpCSV,
-      "password":SignUpPassword
+      "password":SignUpPassword,
+      "point":0,
     };
     //[STEP 4]: Create our AJAX settings. Take note of API key
     let settings = {

@@ -22,10 +22,11 @@ $(document).ready(function(){
             )
 
             $("div.product").css("display","none");
+            // var product = document.getElementsByClassName('product')
+            // product.hide();
         }
         
-        $("div.product-list").click(function (e){
-            e.preventDefault();
+        $("div.product-list").on("click","a",function(){
             for (var i = 0; i < response.length;i++){
                 if(this.children[0].id == response[i].productid)
                 {
