@@ -64,7 +64,7 @@ const rotationValues = [
 function Results(value){
     for (let i of rotationValues) {
       //if the angleValue is between min and max then display it
-      if ( i.minDegree<= value %360 && value%360 <= i.maxDegree) {
+      if (i.minDegree<= value %360 && value%360 <= i.maxDegree) {
         return i.value;
       }
     }

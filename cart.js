@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var cart = JSON.parse(localStorage.getItem("cart"))
+    
     var loggedin = JSON.parse(localStorage.getItem("isloggedin"))
     if(loggedin != true){
         window.location.href = "signup.html";
@@ -10,30 +10,32 @@ $(document).ready(function () {
         var removeid = ($("a.btn-remove").attr("id"))
         e.preventDefault();
         var cart = JSON.parse(localStorage.getItem("cart"))
-        let items = []
-        cart.forEach(element => {     
-            if(element.productid != removeid){
-                items.push(element);
-            }
-        });
-        console.log(items)
-        if(items.length == 0){
-            localStorage.setItem("cartfilled",false)
-
+    let items = []
+    cart.forEach(element => {     
+        if(element.productid != removeid){
+            items.push(element);
         }
-        localStorage.setItem("cart",JSON.stringify(items))
-        window.location.href = "cart.html";
-        Display();
+    });
+    console.log(items)
+    if(items.length == 0){
+        localStorage.setItem("cartfilled",false)
+
+    }
+    localStorage.setItem("cart",JSON.stringify(items))
+    window.location.href = "cart.html";
+    Display();
 
         
     });
     $("a#checkout").click(function (e) { 
+        var cart = JSON.parse(localStorage.getItem("cart"))
         localStorage.setItem("cartfilled",false)
-        console.log("yes");
         e.preventDefault();
         cart.forEach(product => {
             let id = product.id
-            let quantity = product.quantity
+            let quantity = product.sold + product.quantity
+            console.log(product)
+            console.log(quantity)
             var jsondata = {"sold": quantity};
             var settings = {
             "async": true,
@@ -48,12 +50,12 @@ $(document).ready(function () {
             "processData": false,
             "data": JSON.stringify(jsondata)
             }
-    
             $.ajax(settings).done(function (response) {
             console.log(response);
             });
-            localStorage.clear("cart")
-            window.location.href = "cart.html";
+            localStorage.setItem("cart",[])
+            localStorage.setItem("cartfilled",false)
+            // window.location.href = "cart.html";
         });
        
         
@@ -71,13 +73,13 @@ function Click(clicks){
     }
   };
   function Display(){
-    var user = JSON.parse(localStorage.getItem("profile"))
-    var cart = JSON.parse(localStorage.getItem("cart"))
     var added = JSON.parse(localStorage.getItem("cartfilled"))
     var amount = 0
     var finalamount
         if(added == true)
         {
+            var user = JSON.parse(localStorage.getItem("profile"))
+            var cart = JSON.parse(localStorage.getItem("cart"))        
             console.log(cart)
             cart.forEach(item => {
                 amount+=item.price
@@ -104,11 +106,19 @@ function Click(clicks){
                     </div>'
                 )
             });
-            finalamount = amount - user.point
+            if(amount - user.point < 0){
+                point = amount
+                finalamount = 0
+            }
+            else{
+                point =  user.point
+                finalamount = amount - user.point
+            }
+            
             $(".wrapper").append(
                 ' <div class="display-amount">\
                 <p><span>Subtotal</span> <span>$ '+amount+'</span></p><hr>\
-                <p><span>Points</span> <span>$ '+user.point+'</span></p><hr>\
+                <p><span>Points</span> <span>$ '+point+'</span></p><hr>\
                 <p><span>Total</span> <span>$'+finalamount +'</span></p><hr>\
                 <a href="#" id="checkout"><i class ="fa fa-shopping-cart" id="checkout"></i>Check Out</a>\
             </div>'

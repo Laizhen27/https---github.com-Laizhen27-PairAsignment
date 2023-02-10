@@ -1,6 +1,5 @@
 $(document).ready(function () {
     var user = JSON.parse(localStorage.getItem("profile"))
-    var cart = JSON.parse(localStorage.getItem("cart"))
     console.log(user);
     $("div.text-box").append(
         '<div class="left">\
